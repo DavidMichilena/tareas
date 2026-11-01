@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskManager - Vanilla JS</title>
+    <!-- Vinculación del archivo de estilos externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1><b>Gestor de Tareas (Soporte Tecnico)</b></h1>
+
+    <div id="notification" class="notification"></div>
+
+    <div class="dashboard">
+        <div class="card"><h3>Total</h3><p id="metric-total">0</p></div>
+        <div class="card"><h3>Pendientes</h3><p id="metric-pending">0</p></div>
+        <div class="card"><h3>Completadas</h3><p id="metric-completed">0</p></div>
+    </div>
+
+    <div class="task-form">
+        <input type="hidden" id="task-id">
+        <input type="text" id="task-title" placeholder="Título de la tarea..." required>
+        <select id="task-priority">
+            <option value="Alta">Alta</option>
+            <option value="Media" selected>Media</option>
+            <option value="Baja">Baja</option>
+        </select>
+        <button id="btn-save">Guardar Tarea</button>
+        <button id="btn-cancel" style="display:none;">Cancelar</button>
+    </div>
+
+    <div class="controls">
+        <input type="text" id="search-input" placeholder="Buscar por título...">
+        <select id="filter-status">
+            <option value="Todas">Todas</option>
+            <option value="Pendientes">Pendientes</option>
+            <option value="Completadas">Completadas</option>
+        </select>
+        <select id="sort-by">
+            <option value="fecha">Ordenar por Fecha</option>
+            <option value="prioridad">Ordenar por Prioridad</option>
+        </select>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>

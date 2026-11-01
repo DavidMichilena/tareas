@@ -1,0 +1,79 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 20px; 
+    background-color: #f4f7f6; 
+}
+
+.dashboard { 
+    display: flex; 
+    gap: 20px; 
+    margin-bottom: 20px; 
+}
+
+.card { 
+    background: white; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    flex: 1; 
+    text-align: center; 
+}
+
+.controls { 
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 20px; 
+    flex-wrap: wrap; 
+}
+
+.task-form { 
+    background: white; 
+    padding: 15px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.task-list { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.task-item { 
+    background: white; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+}
+
+.task-item.completed .task-title { 
+    text-decoration: line-through; 
+    color: #888; 
+}
+
+.notification { 
+    padding: 10px; 
+    background-color: #ffdddd; 
+    color: #d8000c; 
+    border: 1px solid #d8000c; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+    display: none; 
+}
+
+/* Indicadores visuales de prioridad */
+.priority-alta { 
+    border-left: 5px solid #ff4d4d; 
+}
+
+.priority-media { 
+    border-left: 5px solid #ffaa00; 
+}
+
+.priority-baja { 
+    border-left: 5px solid #00aa55; 
+}
